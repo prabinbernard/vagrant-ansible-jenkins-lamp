@@ -1,0 +1,14 @@
+---
+# tasks file for common
+  - name: install git
+    yum: name=git state=present
+
+  - name: install ntp
+    yum: name=ntp state=present
+
+  - name: write our ntp.conf
+    template: src=ntp.conf.j2 dest=/etc/ntp.conf mode=644 owner=root group=root
+    notify: restart ntp
+
+  - name: start ntp
+    service: name=ntpd state=started

@@ -1,0 +1,11 @@
+[web]
+web1
+
+[database]
+db
+
+[client]
+client
+
+[jenkins]
+jenkins-master

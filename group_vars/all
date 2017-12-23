@@ -1,0 +1,5 @@
+---
+noc_ntpserver: europe.pool.ntp.org
+ansible_connection: ssh
+ansible_ssh_user: vagrant
+ansible_ssh_pass: vagrant

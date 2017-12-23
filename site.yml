@@ -1,0 +1,34 @@
+---
+- hosts: all
+  become: true
+  gather_facts: yes
+
+- hosts: web
+  become: true
+  gather_facts: yes
+
+  roles:
+    - common
+    - apache
+
+- hosts: database
+  become: true
+  gather_facts: yes
+
+  roles:
+    - common
+    - mariadb
+
+- hosts: client
+  become: true
+  gather_facts: yes
+
+  roles:
+    - common
+
+- hosts: jenkins
+  become: true
+  gather_facts: yes
+
+  roles:
+    - jenkins
